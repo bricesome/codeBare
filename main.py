@@ -21,25 +21,25 @@ def code1(nbr,lot):
 def code2(nbr,lot):
     hr = barcode.get_barcode_class('code128')
     for i in range(nbr):
-        H = hr('BFM+FB.Sal.SA77547754'+str(i), writer=ImageWriter())
+        H = hr('BISCUITS FARINE DE MAIS+FARINE DE BLE SALE SANS ADDITIFS-Tel:77547754'+str(i), writer=ImageWriter())
         qt = H.save(str(lot) + "code" + str(i))
 
 def code3(nbr,lot):
     hr = barcode.get_barcode_class('code128')
     for i in range(nbr):
-        H = hr('BFM+FB.Suc.SA77547754'+str(i), writer=ImageWriter())
+        H = hr('BISCUITS FARINE DE MAIS+FARINE DE BLE SUCRE SANS ADDITIFS-Tel:77547754'+str(i), writer=ImageWriter())
         qt = H.save(str(lot) + "code" + str(i))
 
 def code4(nbr,lot):
     hr = barcode.get_barcode_class('code128')
     for i in range(nbr):
-        H = hr('Biscuit de farine de maiis+farine de blé sucré sans additifs\nTel:77547754'+str(i), writer=ImageWriter())
+        H = hr('BISCUITS FARINE DE SORGHO ROUGE+FARINE DE BLE SALE SANS ADDITIFS-Tel:77547754'+str(i), writer=ImageWriter())
         qt = H.save(str(lot) + "code" + str(i))
 
 
-#code2(34,"lot1")
-#code3(33,"lot2")
-code4(1,"lot3")
+code2(34,"lot1")
+code3(33,"lot2")
+code2(33,"lot3")
 
 # def code3(nbr,lot):
 #     hr = barcode.get_barcode_class("gs1128UCCean128")
